@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20">
+    <section id="top" className="relative min-h-screen flex items-center pt-20">
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10"></div>
         <motion.img
