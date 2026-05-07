@@ -1,11 +1,12 @@
 import { motion } from "motion/react";
 import { MENU_ITEMS } from "@/data/menuItems";
 import { fadeUp, staggerContainer } from "@/lib/animations";
+import Button from "@/components/ui/Button";
 import MenuItem from "./MenuItem";
 
 export default function Menu() {
   return (
-    <section className="py-xl bg-surface-container-low">
+    <section id="menu" className="py-xl bg-surface-container-low scroll-mt-20">
       <div className="max-w-container-max mx-auto px-md">
         <motion.div
           initial="hidden"
@@ -44,9 +45,9 @@ export default function Menu() {
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <button className="bg-transparent border-2 border-primary text-primary px-10 py-3 rounded-lg font-bold hover:bg-primary hover:text-on-primary transition-all">
+          <Button variant="outline" size="medium">
             Explore Full Menu
-          </button>
+          </Button>
         </motion.div>
       </div>
     </section>

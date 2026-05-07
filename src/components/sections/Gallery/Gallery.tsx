@@ -7,7 +7,7 @@ import { fadeUp, staggerContainer } from "@/lib/animations";
 
 export default function Gallery() {
   return (
-    <section className="py-xl relative backdrop-blur-xl bg-white/40 border-y border-white/20">
+    <section id="gallery" className="py-xl relative backdrop-blur-xl bg-white/40 border-y border-white/20 scroll-mt-20">
       <div className="max-w-container-max mx-auto px-md">
         <motion.div
           initial="hidden"

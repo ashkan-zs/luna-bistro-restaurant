@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 import heroRestaurantImage from "@/assets/images/hero-restaurant.png";
 import { fadeUp, staggerContainer } from "@/lib/animations";
+import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
 
 export default function Hero() {
   return (
@@ -23,22 +25,32 @@ export default function Hero() {
           animate="visible"
           className="max-w-3xl"
         >
-          <motion.span variants={fadeUp} className="font-label-caps text-secondary-container bg-secondary/50 px-3 py-1 rounded-full uppercase tracking-widest mb-6 inline-block">
-            Established 2012
-          </motion.span>
-          <motion.h1 variants={fadeUp} className="font-h1 text-5xl md:text-7xl mb-6 text-white">
+          <motion.div variants={fadeUp} className="mb-6">
+            <Badge type="overlay" size="normal">
+              Established 2012
+            </Badge>
+          </motion.div>
+          <motion.h1
+            variants={fadeUp}
+            className="font-h1 text-5xl md:text-7xl mb-6 text-white"
+          >
             Luna Bistro
           </motion.h1>
-          <motion.p variants={fadeUp} className="font-body-lg text-white/90 mb-10 leading-relaxed max-w-2xl md:text-xl">
-            Where modern elegance meets timeless flavor. Experience a culinary journey designed to celebrate the finest local ingredients and sophisticated artistry.
+          <motion.p
+            variants={fadeUp}
+            className="font-body-lg text-white/90 mb-10 leading-relaxed max-w-2xl md:text-xl"
+          >
+            Where modern elegance meets timeless flavor. Experience a culinary
+            journey designed to celebrate the finest local ingredients and
+            sophisticated artistry.
           </motion.p>
           <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
-            <button className="bg-white text-black h-14 px-8 rounded-lg font-bold text-lg hover:shadow-xl hover:bg-neutral-100 transition-all flex items-center gap-2">
+            <Button variant="primary" size="large">
               Reserve a Table
-            </button>
-            <button className="bg-white/10 backdrop-blur-sm border border-white/20 text-white h-14 px-8 rounded-lg font-bold text-lg hover:bg-white/20 transition-all">
+            </Button>
+            <Button variant="secondary" size="large">
               View Menu
-            </button>
+            </Button>
           </motion.div>
         </motion.div>
       </div>

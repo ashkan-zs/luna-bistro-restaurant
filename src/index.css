@@ -48,3 +48,7 @@ body {
   font-family: var(--font-body-md);
   -webkit-font-smoothing: antialiased;
 }
+
+html {
+  scroll-behavior: smooth;
+}

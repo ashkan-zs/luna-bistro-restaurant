@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import ctaWineBottleImage from "@/assets/images/cta-wine-bottle.png";
+import Button from "@/components/ui/Button";
 
 export default function CTA() {
   return (
@@ -13,14 +14,23 @@ export default function CTA() {
           className="relative bg-primary text-on-primary rounded-xl overflow-hidden p-xl flex flex-col items-center text-center"
         >
           <div className="absolute inset-0 opacity-20 pointer-events-none">
-            <img className="w-full h-full object-cover" alt="Wine bottle bg" src={ctaWineBottleImage} />
+            <img
+              className="w-full h-full object-cover"
+              alt="Wine bottle bg"
+              src={ctaWineBottleImage}
+            />
           </div>
           <div className="relative z-10 max-w-2xl">
-            <h2 className="font-h2 text-4xl md:text-5xl mb-6">Join Us for an Unforgettable Dining Experience</h2>
-            <p className="font-body-lg mb-10 opacity-90">Tables are filling up quickly for the weekend. Secure your reservation now to guarantee your spot at Luna Bistro.</p>
-            <button className="bg-surface text-primary h-14 px-12 rounded-lg font-bold text-lg hover:scale-105 transition-transform">
+            <h2 className="font-h2 text-4xl md:text-5xl mb-6">
+              Join Us for an Unforgettable Dining Experience
+            </h2>
+            <p className="font-body-lg mb-10 opacity-90">
+              Tables are filling up quickly for the weekend. Secure your
+              reservation now to guarantee your spot at Luna Bistro.
+            </p>
+            <Button variant="surface" size="large" className="px-12">
               Book Your Table Now
-            </button>
+            </Button>
           </div>
         </motion.div>
       </div>

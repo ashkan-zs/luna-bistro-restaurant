@@ -4,7 +4,7 @@ import { fadeUp, staggerContainer } from "@/lib/animations";
 
 export default function About() {
   return (
-    <section className="py-xl bg-surface">
+    <section id="about" className="py-xl bg-surface scroll-mt-20">
       <div className="max-w-container-max mx-auto px-md">
         <div className="grid md:grid-cols-2 gap-xl items-center">
           <motion.div

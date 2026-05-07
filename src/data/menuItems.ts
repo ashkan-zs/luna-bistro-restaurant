@@ -1,3 +1,4 @@
+import type { BadgeType } from "@/components/ui/Badge";
 import burrataSaladImage from "../assets/images/menu-burrata-salad.png";
 import chocolateFondantImage from "../assets/images/menu-chocolate-fondant.png";
 import herbLambImage from "../assets/images/menu-herb-lamb.png";
@@ -5,13 +6,22 @@ import panSearedSalmonImage from "../assets/images/menu-pan-seared-salmon.png";
 import truffleRisottoImage from "../assets/images/menu-truffle-risotto.png";
 import wagyuRibeyeImage from "../assets/images/menu-wagyu-ribeye.png";
 
-export const MENU_ITEMS = [
+type MenuItem = {
+  title: string;
+  price: string;
+  desc: string;
+  img: string;
+  tag?: string;
+  badgeType?: BadgeType;
+};
+
+export const MENU_ITEMS: MenuItem[] = [
   {
     title: "Pan-Seared Salmon",
     price: "$34",
     desc: "Maple glaze, fresh asparagus, and toasted quinoa pilaf.",
     tag: "Gluten Free",
-    tagClass: "bg-error-container/20 text-error",
+    badgeType: "error",
     img: panSearedSalmonImage
   },
   {
@@ -19,7 +29,7 @@ export const MENU_ITEMS = [
     price: "$28",
     desc: "Wild mushrooms, parmesan reggiano, and black truffle oil.",
     tag: "Vegetarian",
-    tagClass: "bg-secondary-container/50 text-on-secondary-container",
+    badgeType: "secondary",
     img: truffleRisottoImage
   },
   {
@@ -27,7 +37,7 @@ export const MENU_ITEMS = [
     price: "$65",
     desc: "Marbled premium beef served with garlic confit and herb butter.",
     tag: "Premium",
-    tagClass: "bg-primary-container text-on-primary-container",
+    badgeType: "primary",
     img: wagyuRibeyeImage
   },
   {
@@ -41,7 +51,7 @@ export const MENU_ITEMS = [
     price: "$18",
     desc: "Heirloom tomatoes, balsamic glaze, and extra virgin olive oil.",
     tag: "Vegetarian",
-    tagClass: "bg-secondary-container/50 text-on-secondary-container",
+    badgeType: "secondary",
     img: burrataSaladImage
   },
   {

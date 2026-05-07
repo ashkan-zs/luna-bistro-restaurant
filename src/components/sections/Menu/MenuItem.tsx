@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import type { MENU_ITEMS } from "@/data/menuItems";
 import { fadeUp } from "@/lib/animations";
+import Badge from "@/components/ui/Badge";
 
 type MenuItemData = (typeof MENU_ITEMS)[number];
 
@@ -28,11 +29,7 @@ export default function MenuItem({ item }: MenuItemProps) {
         <p className="text-on-surface-variant mb-4">{item.desc}</p>
         <div className="mt-auto flex items-end justify-between gap-4">
           {item.tag ? (
-            <span
-              className={`text-[10px] uppercase font-bold tracking-widest px-2 py-1 rounded ${item.tagClass}`}
-            >
-              {item.tag}
-            </span>
+            <Badge type={item.badgeType} size="small">{item.tag}</Badge>
           ) : (
             <span aria-hidden="true" />
           )}

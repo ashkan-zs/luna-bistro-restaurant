@@ -5,7 +5,7 @@ import { fadeUp, staggerContainer } from "@/lib/animations";
 
 export default function Testimonials() {
   return (
-    <section className="py-xl bg-surface-container">
+    <section id="reviews" className="py-xl bg-surface-container scroll-mt-20">
       <div className="max-w-container-max mx-auto px-md">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -1,4 +1,12 @@
 import { useEffect, useState } from "react";
+import Button from "@/components/ui/Button";
+
+const NAV_ITEMS = [
+  { label: "Menu", href: "#menu" },
+  { label: "About", href: "#about" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Reviews", href: "#reviews" },
+];
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -25,17 +33,19 @@ export default function Navbar() {
           <h2 className="font-h3 text-xl font-bold tracking-tight">Luna Bistro</h2>
         </div>
         <nav className="hidden md:flex gap-8">
-          {["Menu", "About", "Gallery", "Reviews"].map((item) => (
-            <a key={item} className={`font-label-caps uppercase tracking-widest hover:text-secondary transition-colors duration-500 ${isScrolled ? "text-on-surface" : "text-white"}`} href="#">
-              {item}
+          {NAV_ITEMS.map((item) => (
+            <a key={item.href} className={`font-label-caps uppercase tracking-widest hover:text-secondary transition-colors duration-500 ${isScrolled ? "text-on-surface" : "text-white"}`} href={item.href}>
+              {item.label}
             </a>
           ))}
         </nav>
-        <button className={`px-6 py-2 rounded-lg font-label-caps uppercase tracking-widest transition-all duration-500 ${
-          isScrolled ? "bg-primary text-on-primary hover:opacity-90" : "bg-white text-black hover:bg-neutral-200"
-        }`}>
+        <Button
+          variant={isScrolled ? "navScrolled" : "navTransparent"}
+          size="small"
+          className="font-label-caps uppercase tracking-widest duration-500"
+        >
           Book Now
-        </button>
+        </Button>
       </div>
     </header>
   );
